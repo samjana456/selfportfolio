@@ -62,13 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
 //form
 
 
-function handleFormSubmit(event) {
+(function(){
+    emailjs.init("kX6-inefi3-GrydIz"); // 🔁 Replace with your actual EmailJS Public Key
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
-  
-    emailjs.sendForm('service_br9y2i4', 'template_uogfekk', '#contact-form', 'kX6-inefi3-GrydIz')
-      .then(function() {
+
+    emailjs.sendForm("service_br9y2i4", "template_uogfek", this)
+      .then(() => {
         alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
+        this.reset();
+      }, (error) => {
+        alert("Failed to send message. Error: " + error.text);
       });
-  }
+  });
