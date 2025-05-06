@@ -59,3 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Loaded theme:', currentTheme);
     console.log('Body classes on load:', body.className);
 });
+//form
+
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+  
+    emailjs.sendForm('service_br9y2i4', 'template_uogfekk', '#contact-form', 'kX6-inefi3-GrydIz')
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
+      });
+  }

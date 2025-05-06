@@ -56,7 +56,7 @@
                     Feel free to reach out via email or connect with me on LinkedIn to start building something extraordinary together!
                 </strong>
             </h4>
-            <div class="contact-links">
+            <!-- <div class="contact-links">
                 <div class="contact-content">
                     <img src="./assets/contact2.png" alt="contact image" class="contact-image">
                     <div class="links-section">
@@ -73,20 +73,47 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
     </div>
-    <div class="conclusion">
-       
-        <h4>
+    <section id="Contact">
+        <section class="Contact">
             
-            <strong>
-                Every great design starts with a meaningful conversation. Let’s connect, share ideas, and create experiences 
-                that truly make a difference. Together, we can bring visions to life and shape the future of design!
-            </strong>
-        </h4>
-    </div>
+            
+            <div class="secondmain">
+                <div class="introduction">
+                    <h3>Get In Touch With Me</h3>
+                    <p><i class="fa-solid fa-envelope"></i> samjanalama4262@gmail.com</p>
+                    <p><i class="fa-solid fa-house"></i> Boudha, Kathmandu</p>
+                    
+                </div>
+                <div class="form-wrapper">
+                    <form id="contact-form" method="POST" onsubmit="handleFormSubmit(event)">
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input type="text" id="name" name="name" placeholder="Full Name" required />
+                        </div>
+                        <div class="input-container">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <input type="text" id="contact" name="contact" placeholder="Phone Number" required />
+                        </div>
+                        <div class="input-container">
+                            <i class="fa fa-envelope icon"></i>
+                            <input type="email" id="email" name="email" placeholder="Your Mail Id" required />
+                        </div>
+                        <div class="input-container">
+                            <i class="fa fa-comment icon"></i>
+                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit">Up for a chat? <i class="fa-solid fa-rocket"></i></button>
+                    </form>
+                </div>
+                
+                
+            </div>
+        </section>
+       </section>
     
     
         
@@ -103,7 +130,13 @@
         </div>
         <p>&copy; 2024 Samjana Lama. All rights reserved.</p>
     </footer>
-
+<!-- form -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("kX6-inefi3-GrydIz"); // Replace with your actual User ID
+  })();
+</script>
     <script src="./script.js"></script>
 </body>
 

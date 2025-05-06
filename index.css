@@ -4,7 +4,7 @@ body {
     font-family: cursive;
 }
 p{
-    color: #807979;
+    
     font-size: 1rem;
 }
 h1{
@@ -62,24 +62,65 @@ nav {
 }
 
 .division {
-    
-    /* Division line */
-
+    padding-top: 150px;
     display: flex;
-    padding-top: 15%;
-   justify-content: space-between;
-   
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5% 10%; */
+    flex-wrap: wrap; /* allow items to wrap */
 }
+
+.intro {
+    flex: 1 1 300px; /* grow and shrink, min width 300px */
+    /* text-align: center; */
+}
+
+.photo {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive behavior */
 @media (max-width: 768px) {
     .division {
-        padding-top: 120%; /* Increase space for smaller screens */
+        
+        flex-direction: column;
+        padding-top: 350px; /* Adds top space to avoid overlap with nav */
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .photo {
+        margin-top: 30px;
+    }
+
+    .photo img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .intro {
+        order: 2;
+    }
+
+    .photo {
+        order: 1;
     }
 }
 
 
+
 /* Responsive Styles */
+/* For devices with max-width 768px (small tablets, large phones) */
 @media (max-width: 768px) {
-    
     nav {
         flex-direction: column;
         align-items: center;
@@ -88,16 +129,25 @@ nav {
 
     .nav-links {
         flex-direction: column;
+        align-items: center;
     }
 
     .nav-links li {
-        margin: 0rem 0;
-        gap: 1px; 
+        margin: 0.5rem 0;
+        gap: 1px;
     }
-    
+}
 
-    
-    
+/* For devices with max-width 480px (small phones) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
 }
 .theme {
     cursor: pointer;
@@ -344,6 +394,7 @@ body.dark .theme {
     border-radius: 3.125rem;
     margin: 1.25rem auto;
 }
+
 .introduction p{
     text-align: justify; /* Justifies paragraph content */
     max-width: 500px; /* Adds width constraint for better readability */
@@ -490,14 +541,48 @@ body.dark .theme {
 }
 
 /* Skill and tool images layout */
-.skillimg {
-    display: flex;
-    gap: 5%;
-}
-
+.skillimg,
 .toolimg {
     display: flex;
+    flex-wrap: wrap; /* allows items to wrap on smaller screens */
     gap: 5%;
+    justify-content: center; /* center the content nicely */
+}
+
+.skillimg img,
+.toolimg img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skillimg img,
+    .toolimg img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .skillimg,
+    .toolimg {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skillimg img,
+    .toolimg img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skillimg,
+    .toolimg {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Footer layout */
@@ -789,5 +874,5 @@ body.dark footer p {
 img {
     max-width: 100%;
     height: auto;
-    display: block;
+    
 }
