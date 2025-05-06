@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    emailjs.sendForm("service_br9y2i4", "template_uogfek", this)
+    emailjs.sendForm("service_br9y2i4", "template_uogfekk", this)
       .then(() => {
         alert("Message sent successfully!");
         this.reset();
