@@ -1,6 +1,6 @@
 .projects {
     padding-top: 10%;
-    padding-bottom: 10%;
+    /* padding-bottom: 10%; */
 
 }
 
@@ -29,6 +29,7 @@
     box-sizing: border-box;
    
 }
+
 
 .project2 p {
     margin-top: 10px;

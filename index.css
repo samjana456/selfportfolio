@@ -456,6 +456,18 @@ body.dark .theme {
     padding-right: 5%;
     flex: 2;
 }
+/* Default (light mode) */
+/* Default light mode */
+#personal-info a {
+    color: rgb(218, 26, 58);
+    text-decoration: none;
+  }
+ 
+
+  #personal-info a:hover{
+    text-decoration: underline;
+   
+  }
 
 /* Tab navigation buttons */
 .tab-buttons {
