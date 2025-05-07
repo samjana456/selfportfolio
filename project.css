@@ -29,10 +29,7 @@
     box-sizing: border-box;
    
 }
-.project2 {
-    text-align: center; /* Centers the content of the box */
-    
-}
+
 .project2 p {
     margin-top: 10px;
     font-size: 1rem;
@@ -87,4 +84,7 @@ button:hover {
     .project-container {
         gap: 5%;
     }
+}
+.paracolor{
+    color: #ff0095;
 }
