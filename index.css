@@ -413,8 +413,8 @@ body.dark .theme {
 }
 
 .aboutme p {
-    text-align: justify; /* Justifies paragraph content */
-    max-width: 800px; /* Adds width constraint for better readability */
+    text-align: center; /* Justifies paragraph content */
+    max-width: 1000px; /* Adds width constraint for better readability */
     line-height: 1.6; /* Improves readability with spacing */
     margin: 10px 0; /* Adds spacing between paragraphs */
 }
